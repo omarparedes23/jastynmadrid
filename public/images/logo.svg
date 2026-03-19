@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" fill="none">
+  <!-- Rayo / marca gráfica -->
+  <polygon points="20,4 11,22 18,22 9,40 28,20 21,20" fill="#A6FF00"/>
+  <!-- Wordmark JASTYN -->
+  <text x="36" y="31" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" letter-spacing="3">JASTYN</text>
+  <!-- Subtítulo Madrid -->
+  <text x="37" y="42" font-family="Arial, sans-serif" font-weight="400" font-size="8" fill="#666666" letter-spacing="5">MADRID</text>
+</svg>

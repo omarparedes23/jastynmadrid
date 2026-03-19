@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 52" fill="none">
+  <!-- Icono serpiente estilizada -->
+  <path d="M12 36 Q16 28 22 32 Q28 36 32 26 Q36 16 44 20" stroke="#A6FF00" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <circle cx="44" cy="20" r="3" fill="#A6FF00"/>
+  <!-- Nombre -->
+  <text x="54" y="26" font-family="Arial Black, sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" letter-spacing="1">CLUB</text>
+  <text x="54" y="42" font-family="Arial Black, sans-serif" font-weight="900" font-size="14" fill="#A6FF00" letter-spacing="1">MAMBA</text>
+</svg>

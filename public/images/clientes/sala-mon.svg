@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 52" fill="none">
+  <!-- Icono nota musical / onda -->
+  <circle cx="14" cy="36" r="6" fill="#A6FF00" opacity="0.9"/>
+  <rect x="19" y="14" width="2.5" height="22" fill="#A6FF00"/>
+  <path d="M21.5 14 Q32 10 38 16" stroke="#A6FF00" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Nombre -->
+  <text x="48" y="22" font-family="Arial, sans-serif" font-weight="400" font-size="9" fill="#888888" letter-spacing="4">SALA</text>
+  <text x="48" y="42" font-family="Arial Black, sans-serif" font-weight="900" font-size="22" fill="#FFFFFF" letter-spacing="2">MON</text>
+</svg>

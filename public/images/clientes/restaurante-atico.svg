@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 52" fill="none">
+  <!-- Icono edificio ático / skyline -->
+  <rect x="10" y="28" width="8" height="14" fill="#555"/>
+  <rect x="20" y="20" width="10" height="22" fill="#666"/>
+  <rect x="32" y="14" width="12" height="28" fill="#A6FF00" opacity="0.7"/>
+  <rect x="46" y="24" width="8" height="18" fill="#555"/>
+  <!-- Nombre -->
+  <text x="62" y="24" font-family="Georgia, serif" font-weight="700" font-size="13" fill="#FFFFFF" letter-spacing="2">RESTAURANTE</text>
+  <text x="62" y="41" font-family="Georgia, serif" font-weight="700" font-size="17" fill="#FFFFFF" letter-spacing="3">ÁTICO</text>
+</svg>

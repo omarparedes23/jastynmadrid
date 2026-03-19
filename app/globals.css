@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Variables globales ─────────────────────────────────── */
+:root {
+  --accent: #A6FF00;
+  --bg: #0A0A0A;
+  --card: #111111;
+}
+
+/* ─── Reset base ─────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A0A0A;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Selección de texto con acento lima ─────────────────── */
+::selection {
+  background: #A6FF00;
+  color: #000000;
+}
+
+/* ─── Scrollbar personalizada ────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #A6FF00;
+  border-radius: 4px;
+}
+
+/* ─── Utilidades custom ──────────────────────────────────── */
+@layer utilities {
+  /* Glow lima para elementos destacados */
+  .glow-accent {
+    box-shadow: 0 0 60px rgba(166, 255, 0, 0.15), 0 0 120px rgba(166, 255, 0, 0.05);
+  }
+
+  /* Borde sutil con gradiente */
+  .border-accent-subtle {
+    border: 1px solid rgba(166, 255, 0, 0.2);
+  }
+
+  /* Gradiente de texto lima → blanco */
+  .text-gradient {
+    background: linear-gradient(135deg, #A6FF00 0%, #ffffff 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Overlay oscuro para secciones */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+}
