@@ -50,10 +50,14 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Copyright */}
-        <p className="text-white/40 text-sm">
-          © {new Date().getFullYear()} Jastyn Madrid. Todos los derechos reservados.
-        </p>
+        {/* Copyright & Legal */}
+        <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-white/40">
+          <p>© {new Date().getFullYear()} Jastyn Madrid</p>
+          <span className="hidden md:block">·</span>
+          <a href="/privacidad" className="hover:text-white transition-colors">
+            Política de Privacidad
+          </a>
+        </div>
       </div>
     </footer>
   )

@@ -11,6 +11,7 @@ import { motion } from 'framer-motion'
 const navLinks = [
   { label: 'Resultados', href: '#resultados' },
   { label: 'Metodología', href: '#metodologia' },
+  { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '#faq' },
 ]
 
@@ -62,7 +63,7 @@ export default function Navbar() {
         {/* CTA desktop */}
         <div className="hidden md:flex items-center gap-4">
           <motion.a
-            href="https://calendly.com/jastynmadrid/auditoria"
+            href="https://wa.me/34629059219?text=Hola%2C%20quiero%20mi%20auditor%C3%ADa%20gratuita"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
@@ -115,7 +116,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://calendly.com/jastynmadrid/auditoria"
+            href="https://wa.me/34629059219?text=Hola%2C%20quiero%20mi%20auditor%C3%ADa%20gratuita"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 bg-[#A6FF00] text-black font-bold text-sm px-5 py-3 rounded-full text-center"
