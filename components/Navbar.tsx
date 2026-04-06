@@ -41,10 +41,10 @@ export default function Navbar() {
           <Image
             src="/images/publicidadmadridlogoVerde02.png"
             alt="Jastyn Madrid"
-            width={160}
-            height={44}
+            width={240}
+            height={66}
             priority
-            className="h-10 w-auto object-contain"
+            className="h-14 w-auto object-contain"
           />
         </Link>
 
