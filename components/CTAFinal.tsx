@@ -44,14 +44,14 @@ export default function CTAFinal() {
           {/* CTA derecho */}
           <div className="relative z-10 flex flex-col items-center md:items-end gap-4 shrink-0">
             <motion.a
-              href="https://calendly.com/jastynmadrid/auditoria"
+              href="https://wa.me/34629059219?text=Hola%2C%20quiero%20mi%20auditor%C3%ADa%20gratuita"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04, boxShadow: '0 0 0 4px rgba(0,0,0,0.15)' }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2.5 bg-black text-[#A6FF00] font-black text-base px-8 py-5 rounded-2xl transition-all duration-200"
             >
-              Reserva tu auditoría ahora
+              Escríbenos por WhatsApp
               <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M3 8h10M9 4l4 4-4 4"

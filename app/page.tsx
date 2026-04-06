@@ -7,6 +7,7 @@ import Logos from '@/components/Logos'
 import Services from '@/components/Services'
 import FAQ from '@/components/FAQ'
 import CTAFinal from '@/components/CTAFinal'
+import Footer from '@/components/Footer'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 
 export default function Home() {
@@ -27,8 +28,11 @@ export default function Home() {
       {/* FAQ con Schema.org para rich snippets */}
       <FAQ />
 
-      {/* Banner CTA final con enlace a Calendly */}
+      {/* Banner CTA final con enlace a WhatsApp */}
       <CTAFinal />
+
+      {/* Footer con redes sociales */}
+      <Footer />
 
       {/* Botón flotante WhatsApp */}
       <FloatingWhatsApp />

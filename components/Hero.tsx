@@ -89,7 +89,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-3 pt-1"
           >
             <motion.a
-              href="https://calendly.com/jastynmadrid/auditoria"
+              href="https://wa.me/34629059219?text=Hola%2C%20quiero%20mi%20auditor%C3%ADa%20gratuita"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
@@ -148,7 +148,7 @@ export default function Hero() {
             style={{ boxShadow: '0 0 80px rgba(166,255,0,0.10), 0 0 1px rgba(255,255,255,0.1)' }}
           >
             <iframe
-              src="https://www.youtube.com/embed/H6Vq6trppAA?rel=0&modestbranding=1&color=white"
+              src="https://www.youtube.com/embed/4Rrr0Os38P8?rel=0&modestbranding=1&color=white"
               title="Jastyn Madrid — Cómo trabajamos"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
