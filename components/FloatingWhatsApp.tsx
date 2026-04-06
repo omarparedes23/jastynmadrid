@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const WA_URL =
-  'https://wa.me/79858496859?text=Hola%2C%20quiero%20mi%20auditor%C3%ADa%20gratuita'
+  'https://wa.me/34629059219?text=Hola%2C%20quiero%20mi%20auditor%C3%ADa%20gratuita'
 
 const TG_URL = 'https://t.me/clubdeespanolenmoscu'
 

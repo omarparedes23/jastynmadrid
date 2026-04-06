@@ -66,6 +66,7 @@ export const metadata: Metadata = {
     title: 'Jastyn Madrid | Marketing de Alto Rendimiento para Hostelería',
     description: 'Llenamos tu local cada semana con clientes reales. +120 locales gestionados, €2.4M en reservas.',
     images: ['/images/og-image.jpg'],
+    // creator: '@jastynmadrid', // Añadir cuando exista
   },
   
   // ─── Robots / Indexación ──────────────────────────────────────
@@ -93,19 +94,22 @@ export const metadata: Metadata = {
   publisher: 'Jastyn Madrid',
   
   // ─── Geo-tags para SEO Local ──────────────────────────────────
+  // Ayuda a Google a entender la ubicación geográfica
   other: {
-    'geo.region': 'ES-M',
-    'geo.placename': 'Madrid',
-    'geo.position': '40.4168;-3.7038',
-    'ICBM': '40.4168, -3.7038',
+    'geo.region': 'ES-M',                    // España - Comunidad de Madrid
+    'geo.placename': 'Madrid',               // Ciudad
+    'geo.position': '40.4168;-3.7038',       // Latitud;Longitud (Madrid centro)
+    'ICBM': '40.4168, -3.7038',              // Formato alternativo de coordenadas
   },
   
+  // ─── Metadatos adicionales ────────────────────────────────────
   category: 'Marketing',
   classification: 'Business',
 }
 
 /* ═══════════════════════════════════════════════════════════════
    SCHEMA.ORG JSON-LD - LOCALBUSINESS
+   Añade rich snippets y mejora el SEO local
    ═══════════════════════════════════════════════════════════════ */
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -117,31 +121,37 @@ const localBusinessSchema = {
   logo: 'https://jastynmadrid.com/images/logo.svg',
   image: 'https://jastynmadrid.com/images/og-image.jpg',
   
-  // DATOS DEL CLIENTE - ACTUALIZADOS
-  telephone: '+34 629 05 92 19',
-  email: 'jastyninn@gmail.com',
+  // TODO: Añadir información de contacto real
+  // telephone: '+34-XXX-XXX-XXX',
+  // email: 'hola@jastynmadrid.com',
   
+  // Dirección (mínimo requerido para SEO local)
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Calle Uceda 95, 1 Izq',
     addressLocality: 'Madrid',
     addressRegion: 'Madrid',
-    postalCode: '28053',
     addressCountry: 'ES',
+    // addressCountry: {
+    //   '@type': 'Country',
+    //   name: 'Spain',
+    // },
   },
   
+  // Coordenadas geográficas
   geo: {
     '@type': 'GeoCoordinates',
     latitude: '40.4168',
     longitude: '-3.7038',
   },
   
+  // Área de servicio
   areaServed: {
     '@type': 'City',
     name: 'Madrid',
     '@id': 'https://en.wikipedia.org/wiki/Madrid',
   },
   
+  // Tipos de servicio
   serviceType: [
     'Marketing para Hostelería',
     'Publicidad para Restaurantes',
@@ -153,6 +163,7 @@ const localBusinessSchema = {
     'Consultoría Marketing Gastronómico',
   ],
   
+  // Catálogo de servicios detallado
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Servicios de Marketing para Hostelería',
@@ -192,8 +203,18 @@ const localBusinessSchema = {
     ],
   },
   
+  // Rating (cuando se tengan reseñas reales)
+  // aggregateRating: {
+  //   '@type': 'AggregateRating',
+  //   ratingValue: '4.9',
+  //   reviewCount: '47',
+  //   bestRating: '5',
+  // },
+  
+  // Rango de precios
   priceRange: '€€',
   
+  // Horario de apertura
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -201,11 +222,20 @@ const localBusinessSchema = {
     closes: '19:00',
   },
   
-  foundingDate: '2023',
+  // Redes sociales (añadir cuando existan)
+  // sameAs: [
+  //   'https://instagram.com/jastynmadrid',
+  //   'https://linkedin.com/company/jastynmadrid',
+  //   'https://facebook.com/jastynmadrid',
+  // ],
+  
+  // Fundación
+  foundingDate: '2023', // Ajustar según sea correcto
 }
 
 /* ═══════════════════════════════════════════════════════════════
    SCHEMA.ORG JSON-LD - WEBSITE
+   Habilita Sitelinks Searchbox en Google
    ═══════════════════════════════════════════════════════════════ */
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -233,14 +263,14 @@ export default function RootLayout({
   return (
     <html lang="es" className={GeistSans.className}>
       <head>
-        {/* Preconnect a dominios externos */}
+        {/* Preconnect a dominios externos para mejorar performance */}
         <link rel="preconnect" href="https://calendly.com" />
         <link rel="dns-prefetch" href="https://calendly.com" />
         
         {/* Manifest para PWA */}
         <link rel="manifest" href="/manifest.json" />
         
-        {/* Tema color */}
+        {/* Tema color para navegadores móviles */}
         <meta name="theme-color" content="#A6FF00" />
         <meta name="msapplication-TileColor" content="#A6FF00" />
         

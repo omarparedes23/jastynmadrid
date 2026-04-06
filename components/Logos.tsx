@@ -49,9 +49,11 @@ export default function Logos() {
           >
             <Image
               src={client.logo}
-              alt={client.name}
+              alt={`${client.name} - Cliente de Jastyn Madrid`}
               width={client.w}
               height={52}
+              loading="lazy"
+              decoding="async"
               className="h-10 w-auto object-contain"
             />
           </div>

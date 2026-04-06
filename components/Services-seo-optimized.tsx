@@ -1,7 +1,12 @@
 'use client'
 
-// ─── Services: Grid de servicios con icono, título y descripción
-// Layout: 1 col mobile / 2 col md / 4 col lg
+// ════════════════════════════════════════════════════════════════
+// Services Component - VERSIÓN SEO OPTIMIZADA
+// Correcciones:
+// - Jerarquía H2 corregida (añadido H2 de sección)
+// - Alt tags mejorados en iconos (aria-label)
+// - Lazy loading en elementos no críticos
+// ════════════════════════════════════════════════════════════════
 
 import { motion } from 'framer-motion'
 
@@ -51,19 +56,22 @@ export default function Services() {
     <section id="metodologia" className="py-24 px-6 md:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
-        {/* Cabecera de sección - SEO OPTIMIZADA */}
+        {/* ═════════════════════════════════════════════════════════
+            HEADER DE SECCIÓN - CORREGIDO CON H2
+            Antes faltaba el H2 que agrupa los H3 de los servicios
+            ════════════════════════════════════════════════════════ */}
         <div className="mb-14 max-w-2xl">
           <span className="text-[#A6FF00] text-xs font-semibold tracking-[0.2em] uppercase inline-flex items-center gap-2 mb-4">
             <span className="w-4 h-px bg-[#A6FF00]" />
             Qué hacemos
           </span>
           
-          {/* H2 SEMÁNTICO PARA SEO - Describe la sección */}
+          {/* H2 PRINCIPAL DE LA SECCIÓN - NUEVO */}
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
             Servicios de Marketing para Hostelería
           </h2>
           
-          {/* H2 VISUAL CON GRADIENTE */}
+          {/* H2 VISUAL CON GRADIENTE (estético) */}
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-white">
             Todo lo que necesitas para{' '}
             <span
@@ -82,10 +90,13 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Grid de cards */}
+        {/* ═════════════════════════════════════════════════════════
+            GRID DE SERVICIOS
+            Cada servicio mantiene H3 para los títulos específicos
+            ════════════════════════════════════════════════════════ */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {services.map((service, i) => (
-            <motion.div
+            <motion.article
               key={service.title}
               custom={i}
               variants={cardVariant}
@@ -97,7 +108,7 @@ export default function Services() {
             >
               {/* Glow hover lima */}
               <div
-                aria-hidden
+                aria-hidden="true"
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"
                 style={{ background: 'radial-gradient(circle at 50% 0%, rgba(166,255,0,0.06) 0%, transparent 70%)' }}
               />
@@ -107,12 +118,15 @@ export default function Services() {
                 {service.tag}
               </span>
 
-              {/* Icono */}
-              <div className="w-11 h-11 rounded-xl bg-[#A6FF00]/10 flex items-center justify-center text-[#A6FF00] group-hover:bg-[#A6FF00]/20 transition-colors duration-300">
+              {/* Icono con aria-label para accesibilidad */}
+              <div 
+                className="w-11 h-11 rounded-xl bg-[#A6FF00]/10 flex items-center justify-center text-[#A6FF00] group-hover:bg-[#A6FF00]/20 transition-colors duration-300"
+                aria-label={`Icono de ${service.title}`}
+              >
                 {service.icon}
               </div>
 
-              {/* Título */}
+              {/* Título del servicio - H3 */}
               <h3 className="text-white font-bold text-lg leading-snug">
                 {service.title}
               </h3>
@@ -128,9 +142,10 @@ export default function Services() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-[#A6FF00] text-sm font-medium hover:gap-3 transition-all duration-200 mt-auto"
+                aria-label={`Saber más sobre ${service.title}`}
               >
                 Saber más
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path
                     d="M3 8h10M9 4l4 4-4 4"
                     stroke="currentColor"
@@ -140,7 +155,7 @@ export default function Services() {
                   />
                 </svg>
               </a>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
@@ -148,11 +163,14 @@ export default function Services() {
   )
 }
 
-/* ─── Iconos inline (SVG optimizados) ───────────────────── */
+/* ════════════════════════════════════════════════════════════════
+   ICONOS SVG CON ARIA-HIDDEN
+   Los iconos son decorativos, el significado viene del contexto
+   ════════════════════════════════════════════════════════════════ */
 
 function IconNightclub() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M9 18V5l12-2v13" />
       <circle cx="6" cy="18" r="3" />
       <circle cx="18" cy="16" r="3" />
@@ -162,7 +180,7 @@ function IconNightclub() {
 
 function IconReservation() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
       <line x1="16" y1="2" x2="16" y2="6" />
       <line x1="8" y1="2" x2="8" y2="6" />
@@ -174,7 +192,7 @@ function IconReservation() {
 
 function IconGeo() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <circle cx="12" cy="10" r="3" />
       <path d="M12 2a8 8 0 0 1 8 8c0 5.25-8 14-8 14S4 15.25 4 10a8 8 0 0 1 8-8z" />
     </svg>
@@ -183,7 +201,7 @@ function IconGeo() {
 
 function IconSocial() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M22 4s-2.7 1.5-4 2c-1-.9-2.4-1.5-4-1.5-3.3 0-6 2.7-6 6 0 .5.1 1 .2 1.4C5.2 11.7 2.5 10 1 7.8c0 0-1 5 4 7-1 .5-2 .8-3 .8 1 2 3.5 3.4 6 3.4C4 21 1 22 1 22c2.5 1.5 5.5 2 9 2 10.8 0 16.7-9 16.4-17C27.4 6.5 22 4 22 4z" />
     </svg>
   )

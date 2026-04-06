@@ -1,0 +1,43 @@
+# ════════════════════════════════════════════════════════════════
+# ROBOTS.TXT - Jastyn Madrid
+# Controla el acceso de los crawlers de motores de búsqueda
+# URL: https://jastynmadrid.com/robots.txt
+# ════════════════════════════════════════════════════════════════
+
+# Permitir acceso a todos los user-agents
+User-agent: *
+Allow: /
+
+# ─── Sitemap ─────────────────────────────────────────────────────
+Sitemap: https://jastynmadrid.com/sitemap.xml
+
+# ─── Crawl-delay (opcional, no todos los bots lo respetan) ───────
+# Crawl-delay: 1
+
+# ─── Rutas bloqueadas ────────────────────────────────────────────
+# API routes - No necesitan ser indexadas
+Disallow: /api/
+
+# Archivos internos de Next.js
+Disallow: /_next/
+
+# Archivos de configuración y datos
+Disallow: /*.json$
+
+# Rutas de error (si existieran como páginas)
+# Disallow: /404
+# Disallow: /500
+
+# ─── User-agents específicos ─────────────────────────────────────
+# Bloquear bots de IA que scrapean para entrenamiento (opcional)
+# User-agent: GPTBot
+# Disallow: /
+
+# User-agent: ChatGPT-User
+# Disallow: /
+
+# User-agent: Google-Extended
+# Disallow: /
+
+# User-agent: CCBot
+# Disallow: /

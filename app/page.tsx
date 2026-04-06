@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Logos from '@/components/Logos'
 import Services from '@/components/Services'
+import FAQ from '@/components/FAQ'
 import CTAFinal from '@/components/CTAFinal'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* Grid de servicios */}
       <Services />
+
+      {/* FAQ con Schema.org para rich snippets */}
+      <FAQ />
 
       {/* Banner CTA final con enlace a Calendly */}
       <CTAFinal />
