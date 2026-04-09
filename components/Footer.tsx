@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Logo / Brand */}
         <div className="text-xl font-black tracking-tight">
-          <span className="text-white">JASTYN</span>
+          <span className="text-white">PUBLICIDAD</span>
           <span className="text-[#A6FF00]">.</span>
         </div>
 
