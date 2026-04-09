@@ -39,12 +39,12 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/publicidadmadridlogoVerde02.png"
+            src="/images/logo_grande.jpg"
             alt="Jastyn Madrid"
             width={240}
-            height={66}
+            height={185}
             priority
-            className="h-14 w-auto object-contain"
+            className="h-12 w-auto object-contain rounded-sm"
           />
         </Link>
 

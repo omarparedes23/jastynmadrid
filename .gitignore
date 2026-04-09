@@ -19,6 +19,7 @@ out/
 
 # TypeScript cache
 *.tsbuildinfo
+^.md
 
 # VSCode settings
 .vscode/
