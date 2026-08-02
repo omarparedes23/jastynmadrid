@@ -1,7 +1,7 @@
 # ════════════════════════════════════════════════════════════════
 # ROBOTS.TXT - Jastyn Madrid
 # Controla el acceso de los crawlers de motores de búsqueda
-# URL: https://jastynmadrid.com/robots.txt
+# URL: https://www.publicidadmadrid.es/robots.txt
 # ════════════════════════════════════════════════════════════════
 
 # Permitir acceso a todos los user-agents
@@ -9,7 +9,7 @@ User-agent: *
 Allow: /
 
 # ─── Sitemap ─────────────────────────────────────────────────────
-Sitemap: https://jastynmadrid.com/sitemap.xml
+Sitemap: https://www.publicidadmadrid.es/sitemap.xml
 
 # ─── Crawl-delay (opcional, no todos los bots lo respetan) ───────
 # Crawl-delay: 1

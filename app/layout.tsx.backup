@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     'reservas automáticas restaurante',
     'publicidad geolocalizada',
   ],
-  metadataBase: new URL('https://jastynmadrid.com'),
+  metadataBase: new URL('https://www.publicidadmadrid.es'),
   openGraph: {
     title: 'Jastyn Madrid | Agencia de Marketing para Hostelería',
     description: 'Llenamos tu local cada semana con clientes reales.',
-    url: 'https://jastynmadrid.com',
+    url: 'https://www.publicidadmadrid.es',
     siteName: 'Jastyn Madrid',
     locale: 'es_ES',
     type: 'website',

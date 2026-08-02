@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   
   // ─── Base URL para canonical y OG ─────────────────────────────
-  metadataBase: new URL('https://jastynmadrid.com'),
+  metadataBase: new URL('https://www.publicidadmadrid.es'),
   
   // ─── Canonical URL ────────────────────────────────────────────
   alternates: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Jastyn Madrid | Agencia de Marketing para Hostelería',
     description: 'Llenamos tu local cada semana con clientes reales. +120 locales gestionados, €2.4M en reservas generadas.',
-    url: 'https://jastynmadrid.com',
+    url: 'https://www.publicidadmadrid.es',
     siteName: 'Jastyn Madrid',
     locale: 'es_ES',
     type: 'website',
@@ -117,13 +117,13 @@ const localBusinessSchema = {
   name: 'Jastyn Madrid',
   alternateName: 'Jastyn',
   description: 'Agencia de marketing especializada en hostelería. Llenamos restaurantes, salas de fiesta y locales gastronómicos en Madrid con estrategias de captación, reservas automáticas y publicidad geolocalizada.',
-  url: 'https://jastynmadrid.com',
-  logo: 'https://jastynmadrid.com/images/logo.svg',
-  image: 'https://jastynmadrid.com/images/og-image.jpg',
+  url: 'https://www.publicidadmadrid.es',
+  logo: 'https://www.publicidadmadrid.es/images/logo.svg',
+  image: 'https://www.publicidadmadrid.es/images/og-image.jpg',
   
   // TODO: Añadir información de contacto real
   // telephone: '+34-XXX-XXX-XXX',
-  // email: 'hola@jastynmadrid.com',
+  // email: 'jastyninn@gmail.com',
   
   // Dirección (mínimo requerido para SEO local)
   address: {
@@ -241,12 +241,12 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Jastyn Madrid',
-  url: 'https://jastynmadrid.com',
+  url: 'https://www.publicidadmadrid.es',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://jastynmadrid.com/?s={search_term_string}',
+      urlTemplate: 'https://www.publicidadmadrid.es/?s={search_term_string}',
     },
     'query-input': 'required name=search_term_string',
   },

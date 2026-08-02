@@ -4,11 +4,11 @@ import { MetadataRoute } from 'next'
  * Sitemap XML dinámico para Jastyn Madrid
  * Next.js genera automáticamente sitemap.xml en la raíz
  * 
- * URL accesible en: https://jastynmadrid.com/sitemap.xml
+ * URL accesible en: https://www.publicidadmadrid.es/sitemap.xml
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://jastynmadrid.com'
+  const baseUrl = 'https://www.publicidadmadrid.es'
   
   return [
     {
