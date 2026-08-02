@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const WA_URL =
   'https://wa.me/34629059219?text=Hola%2C%20quiero%20mi%20auditor%C3%ADa%20gratuita'
 
-const TG_URL = 'https://t.me/clubdeespanolenmoscu'
+const TG_URL = 'https://t.me/jastynmadrid'
 
 export default function FloatingWhatsApp() {
   const [hoveredWa, setHoveredWa] = useState(false)
