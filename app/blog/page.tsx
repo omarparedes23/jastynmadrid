@@ -1,6 +1,7 @@
 // ─── Blog listing page ──────────────────────────────────────
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 import posts from '@/data/posts.json'
 
@@ -12,16 +13,22 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <main className="bg-[#0A0A0A] text-white min-h-screen">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-          <Link href="/" className="text-xl font-black tracking-tight">
-            <span className="text-white">JASTYN</span>
-            <span className="text-[#A6FF00]">.</span>
+      {/* Header con logo ampliado sin texto añadido */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/85 backdrop-blur-xl border-b border-white/[0.08]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 md:h-24 flex items-center justify-between">
+          <Link href="/" className="flex items-center" aria-label="Inicio Jastyn Madrid">
+            <Image
+              src="/images/logo-icon-clean.png"
+              alt="Jastyn Madrid"
+              width={140}
+              height={140}
+              priority
+              className="h-14 md:h-16 w-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-[0_0_15px_rgba(166,255,0,0.25)]"
+            />
           </Link>
           <Link 
             href="/" 
-            className="text-sm text-white/60 hover:text-white transition-colors"
+            className="text-sm font-medium text-white/70 hover:text-[#A6FF00] transition-colors"
           >
             ← Volver al inicio
           </Link>
@@ -29,7 +36,7 @@ export default function BlogPage() {
       </header>
 
       {/* Content */}
-      <section className="pt-32 pb-20 px-6 md:px-10">
+      <section className="pt-36 pb-20 px-6 md:px-10">
         <div className="max-w-4xl mx-auto">
           {/* Title */}
           <div className="mb-12">
@@ -52,7 +59,7 @@ export default function BlogPage() {
             {posts.map((post) => (
               <article 
                 key={post.id}
-                className="group bg-[#111] border border-white/8 rounded-2xl p-6 md:p-8 hover:border-[#A6FF00]/30 transition-all duration-300"
+                className="group glass-card rounded-2xl p-6 md:p-8"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-2 mb-4">
                   <span className="text-[#A6FF00] text-xs font-semibold tracking-wide uppercase">

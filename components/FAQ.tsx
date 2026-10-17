@@ -1,7 +1,7 @@
 'use client'
 
 // ════════════════════════════════════════════════════════════════
-// FAQ Component con Schema.org JSON-LD
+// FAQ Component con Schema.org JSON-LD intacto
 // Mejora SEO con rich snippets de preguntas frecuentes
 // ════════════════════════════════════════════════════════════════
 
@@ -46,7 +46,7 @@ const faqData: FAQItem[] = [
   },
 ]
 
-// Schema.org FAQPage JSON-LD
+// Schema.org FAQPage JSON-LD (100% preservado)
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -73,13 +73,13 @@ export default function FAQ() {
         }}
       />
 
-      <section id="faq" className="py-24 px-6 md:px-10 lg:px-20 bg-[#0A0A0A]">
+      <section id="faq" className="py-24 px-6 md:px-10 lg:px-20 bg-[#0A0A0A] scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <span className="text-[#A6FF00] text-xs font-semibold tracking-[0.2em] uppercase inline-flex items-center gap-2 mb-4">
+            <span className="text-[#A6FF00] text-xs font-bold tracking-[0.2em] uppercase inline-flex items-center gap-2 mb-4">
               <span className="w-4 h-px bg-[#A6FF00]" />
-              FAQ
+              Resolvemos tus dudas
             </span>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-white">
               Preguntas{' '}
@@ -94,78 +94,100 @@ export default function FAQ() {
                 frecuentes
               </span>
             </h2>
-            <p className="mt-4 text-[#666] text-lg max-w-2xl mx-auto">
-              Todo lo que necesitas saber sobre nuestros servicios de marketing para hostelería en Madrid.
+            <p className="mt-4 text-white/55 text-lg max-w-2xl mx-auto">
+              Todo lo que necesitas saber antes de escalar las reservas y el aforo de tu local en Madrid.
             </p>
           </div>
 
           {/* FAQ Items */}
           <div className="space-y-4">
-            {faqData.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="border border-white/10 rounded-2xl overflow-hidden bg-[#111]"
-              >
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
-                  aria-expanded={openIndex === index}
-                >
-                  <h3 className="text-white font-bold text-lg pr-4">
-                    {item.question}
-                  </h3>
-                  <span
-                    className={`flex-shrink-0 w-8 h-8 rounded-full bg-[#A6FF00]/10 flex items-center justify-center text-[#A6FF00] transition-transform duration-300 ${
-                      openIndex === index ? 'rotate-45' : ''
-                    }`}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path
-                        d="M8 2v12M2 8h12"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </span>
-                </button>
-
+            {faqData.map((item, index) => {
+              const isOpen = openIndex === index
+              return (
                 <motion.div
-                  initial={false}
-                  animate={{
-                    height: openIndex === index ? 'auto' : 0,
-                    opacity: openIndex === index ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  className="overflow-hidden"
+                  key={index}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.06 }}
+                  className={`rounded-2xl overflow-hidden transition-all duration-300 border ${
+                    isOpen
+                      ? 'bg-[#12140E] border-[#A6FF00]/45 shadow-[0_0_35px_rgba(166,255,0,0.06)]'
+                      : 'bg-[#111111] border-white/10 hover:border-white/20'
+                  }`}
                 >
-                  <div className="px-6 pb-6 text-[#888] leading-relaxed">
-                    {item.answer}
-                  </div>
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                    className="w-full flex items-center justify-between p-6 text-left transition-colors"
+                    aria-expanded={isOpen}
+                  >
+                    <div className="flex items-center gap-4 pr-4">
+                      <span
+                        className={`text-xs font-mono font-bold px-2.5 py-1 rounded-lg transition-colors ${
+                          isOpen
+                            ? 'bg-[#A6FF00] text-black'
+                            : 'bg-white/[0.05] text-white/40'
+                        }`}
+                      >
+                        0{index + 1}
+                      </span>
+                      <h3 className="text-white font-bold text-base md:text-lg">
+                        {item.question}
+                      </h3>
+                    </div>
+                    <span
+                      className={`flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        isOpen
+                          ? 'bg-[#A6FF00] text-black rotate-45'
+                          : 'bg-[#A6FF00]/10 text-[#A6FF00]'
+                      }`}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                          d="M8 2v12M2 8h12"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: isOpen ? 'auto' : 0,
+                      opacity: isOpen ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.28, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6 pl-16 text-white/70 text-sm md:text-base leading-relaxed">
+                      {item.answer}
+                    </div>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ))}
+              )
+            })}
           </div>
 
-          {/* CTA */}
+          {/* CTA inferior directo a WhatsApp */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-12 text-center"
+            className="mt-12 text-center p-6 rounded-2xl bg-white/[0.02] border border-white/[0.07]"
           >
-            <p className="text-[#666] mb-4">¿Tienes otras preguntas?</p>
+            <p className="text-white/70 text-sm md:text-base mb-3">
+              ¿Tienes una duda específica sobre tu restaurante, sala o grupo en Madrid?
+            </p>
             <a
-              href="https://calendly.com/jastynmadrid/auditoria"
+              href="https://wa.me/34629059219?text=Hola%2C%20tengo%20una%20consulta%20sobre%20vuestros%20servicios%20de%20marketing%20para%20hosteler%C3%ADa%20en%20Madrid"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#A6FF00] font-semibold hover:gap-3 transition-all duration-200"
+              className="inline-flex items-center gap-2 text-[#A6FF00] font-bold hover:gap-3 transition-all duration-200"
             >
-              Habla con nosotros
+              Habla directamente con un especialista por WhatsApp
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M3 8h10M9 4l4 4-4 4"

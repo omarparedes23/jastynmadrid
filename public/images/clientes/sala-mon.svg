@@ -1,9 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 52" fill="none">
-  <!-- Icono nota musical / onda -->
-  <circle cx="14" cy="36" r="6" fill="#A6FF00" opacity="0.9"/>
-  <rect x="19" y="14" width="2.5" height="22" fill="#A6FF00"/>
-  <path d="M21.5 14 Q32 10 38 16" stroke="#A6FF00" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-  <!-- Nombre -->
-  <text x="48" y="22" font-family="Arial, sans-serif" font-weight="400" font-size="9" fill="#888888" letter-spacing="4">SALA</text>
-  <text x="48" y="42" font-family="Arial Black, sans-serif" font-weight="900" font-size="22" fill="#FFFFFF" letter-spacing="2">MON</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 56" fill="none">
+  <!-- Emblema acústico Sala Mon -->
+  <rect x="6" y="8" width="40" height="40" rx="20" fill="#A6FF00" fill-opacity="0.08" stroke="#A6FF00" stroke-width="1.5" stroke-opacity="0.65"/>
+  <line x1="17" y1="24" x2="17" y2="32" stroke="#A6FF00" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="23" y1="18" x2="23" y2="38" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="29" y1="21" x2="29" y2="35" stroke="#A6FF00" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="35" y1="25" x2="35" y2="31" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Tipografía Sala Mon -->
+  <text x="58" y="22" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="9.5" fill="#999999" letter-spacing="4">LIVE &amp; CLUB</text>
+  <text x="58" y="42" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="20" fill="#FFFFFF" letter-spacing="3">SALA MON</text>
 </svg>
